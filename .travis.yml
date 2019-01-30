@@ -3,4 +3,4 @@ language: node_js
 install:
   - npm install
 after_success:
-  - lighthousebot "https://bbc.co.uk"
+  - npm run lh -- https://bbc.co.uk
