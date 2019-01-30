@@ -1,0 +1,11 @@
+{
+ "name": "vijaycs85-lighthouse",
+ "description": "Explore lighthouse CI.",
+ "license": "GPL-2.0",
+ "scripts": {
+  "lh": "lighthousebot"
+ },
+ "devDependencies": {
+  "lighthousebot": "git+https://github.com/ebidel/lighthousebot.git"
+ }
+}
