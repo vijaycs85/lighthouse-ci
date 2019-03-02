@@ -3,8 +3,8 @@
  "description": "lighthouse CI.",
  "license": "MIT",
  "scripts": {
-   "start": "node index.js",
-  "serve": "npm run develop"
+  "start": "node index.js",
+  "gh-comment-pr": "curl -H \"Authorization: token ${GITHUB_TOKEN}\" -X POST -d \"{\"body\": \"Hello world\"}\" \"https://api.github.com/repos/${TRAVIS_REPO_SLUG}/issues/${TRAVIS_PULL_REQUEST}/comments\""
  },
  "devDependencies": {
   "lighthouse": "^4.1.0"

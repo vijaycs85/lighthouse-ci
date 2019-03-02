@@ -1,7 +1,8 @@
 dist: trusty
-install:
-  - yarn install
-after_success:
-  - yarn run start
 addons:
   chrome: stable
+install:
+  - npm install
+script: npm run start
+after_success:
+  - npm run comment

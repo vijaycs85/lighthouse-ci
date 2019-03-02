@@ -16,4 +16,5 @@ const opts = {
 
 launchChromeAndRunLighthouse('https://bbc.co.uk', opts).then(results => {
   console.log(results);
+  return true;
 });
