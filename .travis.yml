@@ -1,5 +1,4 @@
 dist: trusty
-language: node_js
 install:
   - yarn install
 after_success:
