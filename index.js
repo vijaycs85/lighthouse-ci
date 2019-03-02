@@ -15,11 +15,12 @@ const opts = {
   chromeFlags: ['--show-paint-rects']
 };
 
-launchChromeAndRunLighthouse('https://bbc.co.uk', opts).then(results => {
+launchChromeAndRunLighthouse('https://www.bbc.co.uk/news', opts).then(results => {
   return fs.writeFile("./result.json", results, function(err) {
     if(err) {
       return console.log(err);
     }
+    return true;
   });
 });
 
