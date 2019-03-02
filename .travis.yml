@@ -6,3 +6,5 @@ install:
 script: npm run start
 after_success:
   - npm run comment
+after_success:
+    - $TRAVIS_BUILD_DIR/.travis/comment.sh
