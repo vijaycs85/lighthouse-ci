@@ -1,5 +1,6 @@
 const lighthouse = require('lighthouse');
 const chromeLauncher = require('chrome-launcher');
+const fs = require('fs');
 
 function launchChromeAndRunLighthouse(url, opts, config = null) {
   return chromeLauncher.launch({chromeFlags: opts.chromeFlags}).then(chrome => {
@@ -15,6 +16,10 @@ const opts = {
 };
 
 launchChromeAndRunLighthouse('https://bbc.co.uk', opts).then(results => {
-  console.log(results);
-  return true;
+  return fs.writeFile("./result.json", results, function(err) {
+    if(err) {
+      return console.log(err);
+    }
+  });
 });
+
