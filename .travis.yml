@@ -1,6 +1,8 @@
 dist: trusty
 language: node_js
 install:
-  - npm install
+  - yarn install
 after_success:
-  - npm run lh -- https://bbc.co.uk
+  - yarn run start
+addons:
+  chrome: stable
